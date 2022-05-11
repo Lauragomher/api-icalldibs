@@ -11,7 +11,7 @@ class clsConfiguracion{
         //PARAMETROS DE LA APLICACION
         $this->array_parametros["servidor_bd"] = "eu-cdbr-west-02.cleardb.net";    
         $this->array_parametros["charset_mysql"] = "UTF-8";
-        $this->array_parametros["nombre_bd"] = "eu-cdbr-west-02.cleardb.net";       
+        $this->array_parametros["nombre_bd"] = "heroku_ae928982a87f700";       
         $this->array_parametros["usuario_bd"] = "ba6fb3d26326a2";
         $this->array_parametros["password_bd"] = "415b0db7";
         $this->array_parametros["puerto_bd"] = "3306";
