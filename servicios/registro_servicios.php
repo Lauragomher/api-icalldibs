@@ -25,7 +25,10 @@
             break;
         case 'alta_reserva':
             include_once('servicios/alta_reserva.php');
-            break;                 
+            break;
+        case 'alta_mensaje_tablon':
+                include_once('servicios/alta_mensaje_tablon.php');
+                break;                   
         //================================================
         //MODIFICACIONES
         //================================================ 
@@ -48,6 +51,9 @@
                 include_once('servicios/obtener_administradores.php');
                 break;
         case 'obtener_datos_comunidad':
+                include_once('servicios/obtener_datos_comunidad.php');
+                break;
+        case 'obtener_anuncios_comunidad':
                 include_once('servicios/obtener_datos_comunidad.php');
                 break;
         case 'obtener_zonas_comunes':
