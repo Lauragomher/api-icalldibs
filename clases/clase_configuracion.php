@@ -11,7 +11,7 @@ class clsConfiguracion{
         //PARAMETROS DE LA APLICACION
         $this->array_parametros["servidor_bd"] = "mysql-icalldibs.alwaysdata.net";    
         $this->array_parametros["charset_mysql"] = "UTF-8";
-        $this->array_parametros["nombre_bd"] = "icalldibs-practica";       
+        $this->array_parametros["nombre_bd"] = "icalldibs_practica";       
         $this->array_parametros["usuario_bd"] = "icalldibs";
         $this->array_parametros["password_bd"] = "L83@fQXTmmehX*!";
         $this->array_parametros["puerto_bd"] = "3306";
