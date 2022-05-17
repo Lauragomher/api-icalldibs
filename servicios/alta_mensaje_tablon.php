@@ -16,6 +16,7 @@
 			$parametrosObligatorios=array(
               "id_usuario" => "1",
               "id_comunidad" => "1",
+			  "titulo" => "1",
 			  "mensaje" => "1",
 			  "fecha_publicacion" => "0"             
 			);
@@ -35,9 +36,11 @@
 			}
 			else{				
 					//Creamos el registro
-                    $sentenciaInsert =  "insert into tablon_anuncios(id, id_usuario, id_comunidad, mensaje, fecha_publicacion) " .
+                    $sentenciaInsert =  "insert into tablon_anuncios(id, id_usuario, id_comunidad, titulo, mensaje, fecha_publicacion) " .
                     "values (null, '" . $parametrosRecibidos['id_usuario'] . "', '" . ($parametrosRecibidos['id_comunidad']) . "'
-					, '" . ($parametrosRecibidos['mensaje']) . "', '" . ($parametrosRecibidos['fecha_publicacion']) . "');";
+					, '" . ($parametrosRecibidos['titulo']) . "'
+					, '" . ($parametrosRecibidos['mensaje']) . "'
+					, '" . ($parametrosRecibidos['fecha_publicacion']) . "');";
 
                     $resultado = $objBD->ejecutarInsert($sentenciaInsert);
 					

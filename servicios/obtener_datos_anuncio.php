@@ -14,7 +14,7 @@
 			//Si tiene valor "1" además de llegarnos por POST, no pueden estar vacios
 			//Si tiene valor "0" será necesario enviar el valor pero puede estar vacio
 			$parametrosObligatorios=array(
-				"id_comunidad" => 1,
+				"id_anuncio" => 1,
 			);
 
 			//Recogemos los parámetros que lleguen por POST (raw y form-data)
@@ -46,7 +46,6 @@
 				$objConsultaSQL->addTablaInnerJoin("usuario", "tablon_anuncios.id_usuario = usuario.id", clsconstantes::$AND);
 				$objConsultaSQL->addCampoSelect('usuario.nombre','nombre_usuario');
 				$objConsultaSQL->addCampoSelect('usuario.apellidos','apellidos_usuario');
-				$objConsultaSQL->addCampoSelect('usuario.id_rol','rol_usuario');
 				$objConsultaSQL->addTablaInnerJoin("comunidad_de_vecinos", "tablon_anuncios.id_comunidad= comunidad_de_vecinos.id");
 
 
@@ -64,9 +63,9 @@
 			}
 
 			//CONSTRUIMOS FILTRADOS
-			if(array_key_exists("id_comunidad", $parametrosRecibidos))
-				$objConsultaSQL->addCondicionWhere("comunidad_de_vecinos.id"," = 
-				'".$parametrosRecibidos['id_comunidad']."' ");
+			if(array_key_exists("id_anuncio", $parametrosRecibidos))
+				$objConsultaSQL->addCondicionWhere("tablon_anuncios.id"," = 
+				'".$parametrosRecibidos['id_anuncio']."' ");
 
 			//DEBUG. SOLO DESCOMENTAR SI QUERÉIS VER LA CONSULTA QUE SE EJECUTA
 			//AL DESCOMENTAR, NO EJECUTARÁ LA CONSULTA, SOLO LA MOSTRARÁ
@@ -120,7 +119,6 @@
 								"id_usuario" => $fila["id_usuario"],
 								"nombre_usuario" => $fila["nombre_usuario"],							
 								"apellidos_usuario" => $fila["apellidos_usuario"],
-								"rol_usuario" => $fila["rol_usuario"],
 								"titulo_anuncio" => $fila["titulo_anuncio"],
 								"mensaje_anuncio" => $fila["mensaje_anuncio"],
 								"fecha_anuncio" => $fila["fecha_anuncio"],

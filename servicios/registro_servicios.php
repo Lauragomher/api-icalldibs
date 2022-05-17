@@ -53,8 +53,11 @@
         case 'obtener_datos_comunidad':
                 include_once('servicios/obtener_datos_comunidad.php');
                 break;
+        case 'obtener_datos_anuncio':
+                include_once('servicios/obtener_datos_anuncio.php');
+                break;
         case 'obtener_anuncios_comunidad':
-                include_once('servicios/obtener_datos_comunidad.php');
+                include_once('servicios/obtener_anuncios_comunidad.php');
                 break;
         case 'obtener_zonas_comunes':
                 include_once('servicios/obtener_zonas_comunes.php');
@@ -109,6 +112,9 @@
                 break;
         case 'eliminar_reserva':
                 include_once('servicios/eliminar_reserva.php');
+                break;
+        case 'eliminar_anuncio':
+                include_once('servicios/eliminar_anuncio.php');
                 break;
         //TEST DE ESTADO    
         case 'ping':
